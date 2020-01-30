@@ -1,10 +1,44 @@
-player1Cards = [8,7,8,6],[3,5,8,8,3]
-player2Cards = [5,4,7,5],[7,6,4,6,9]
+// Fable Tales Top Trump- basic if statement layout
+let bigby_Wolf = ["Bigby Wolf", 9, 7, 7, 5];
+let snow_White = ["Snow White", 3, 5, 8, 8];
 
-// const bigbyWolf = new fableTales("Bigby Wolf", 9, 7, 7, 5, 7)
-// const snowWhite = new fableTales("Snow White", 3, 5, 8, 8, 3)
-// const jackPumpkinhead = new fableTales("Jack Pumpkinhead", 2, 6, 4, 8, 4)
-// const lamiaBeauty = new fableTales("Lamia Beauty", 7, 6, 4, 6, 9)
+if(bigby_Wolf[1] > snow_White[1]){
+    console.log("Player 1 wins");
+}
+else if (bigby_Wolf[1] == snow_White[1]){
+    console.log("Draw");
+}
+else {
+    console.log("Player 2 wins");  
+}
+
+
+// Different card info 
+const bigbyWolf = new fableTales("Bigby Wolf", 9, 7, 7, 5, 7)
+const snowWhite = new fableTales("Snow White", 3, 5, 8, 8, 3)
+const jackPumpkinhead = new fableTales("Jack Pumpkinhead", 2, 6, 4, 8, 4)
+const lamiaBeauty = new fableTales("Lamia Beauty", 7, 6, 4, 6, 9)
+
+
+// 2 player toggle logic
+let player1 = true;
+let player2;
+
+const playerturn = () => {
+    if(player1) {
+        console.log(`its player 1 turn`);
+        player1 = false 
+    }
+else  {
+        console.log(`its player 2 turn`);
+        player1 = true  
+    }
+}
+
+
+// Development for card draw and code fgor switching cards between players 
+player1Cards = [8,2,8,4]
+player2Cards = [5,4,7,5]
 
 const drawCard = (playerNum) => {
 

@@ -1,41 +1,81 @@
-// Fable Tales Top Trump 
+// Card template and set-up using classes
+class TopTrumps {
+    constructor(name, health) {
+        this._name = name;
+        this._health = health;
+    }
+    get name() {
+        return this._name;
+    }
+    get health() {
+        return this._health;
+    }
+}
 
-// let bigby_Wolf = ["Bigby Wolf", 9, 7, 7, 5];
-// let snow_White = ["Snow White", 3, 5, 8, 8];
+class fableTales extends TopTrumps {
+    constructor(name, health, strength, cunning, intelligence, magical, corruption){
+    super(name, health)
+    this._strength = strength;
+    this._cunning = cunning;
+    this._intelligence = intelligence;
+    this._magical = magical; 
+    this._corruption = corruption; 
+    }
+}
 
-// if(bigby_Wolf[1] > snow_White[1]){
-//     console.log("Player 1 wins");
+const player1Cards = [
+    bigbyWolf = new fableTales("Bigby Wolf", 9, 4 ,6, 8, 7),
+    snowWhite = new fableTales("Snow White", 9, 7 ,2, 9, 5),
+    jackPumpkinhead = new fableTales("Jack Pumpkinhead", 6, 4 ,6, 7, 6),
+    lamiaBeauty = new fableTales("Lamia Beauty", 7, 3, 7, 1, 0)
+]
+
+const player2Cards = [
+    Cinderella = new fableTales("Cinderella", 3, 6, 2, 3, 1),
+    princeCharming = new fableTales("Prince Charming", 8, 6 ,7, 1, 5),
+    captainHook= new fableTales("Captain Hook", 4, 2, 4, 9, 5),
+    wickedWitch = new fableTales("Wicked Witch", 5, 2, 7, 9, 1)
+]
+
+// const shuffle = () => {
+//     for (let i = 0; i < cards.length; i++){
+//         if (cards[i] % 2) {
+//             player1Cards.push[cards[i]]
+//         } 
+//         else{
+//         player2Cards.push[cards[i]]
+//         }
+//     }
 // }
-// else if (bigby_Wolf[1] == snow_White[1]){
-//     console.log("Draw");
-// }
-// else {
-//     console.log("Player 2 wins");
-    
-// }
-//  Card array for transfering cards from 1 player to another
-let player1Cards = [100, 2234927219128, 30909] 
-let player2Cards = [41111, 52131, 632131]
+
+// shuffle()
+
+// let player1Cards = [0]
+// let player2Cards = [0]
+// player1Cards = []
+// player2Cards = []
+// console.log(player1Cards[0]);
+
+// const holdingPile = 0;
 
 const drawCard = (playerNum) => {
 
-    alert(`Player: ${playerNum} its your turn`)
+    console.log(`Player: ${playerNum} its your turn`)
     
-    alert(`player 1 has CARD: ${player1Cards[0]} and ${player1Cards.length} cards`)
-    alert(`player 2 has CARD: ${player2Cards[0]} and ${player2Cards.length} cards`)
+    console.log(`player 1 has CARD: ${player1Cards[0]._health} and ${player1Cards.length} cards`)
+    console.log(`player 2 has CARD: ${player2Cards[0]._health} and ${player2Cards.length} cards`)
     
-
-    if (player1Cards[0] > player2Cards[0]) {
+    if (player1Cards[0].health > player2Cards[0]._health) {
         pushFunc(1)
     }
-    else if (player2Cards[0] > player1Cards[0]) {
+    else if (player2Cards[0].health > player1Cards[0]._health) {
         pushFunc(2)
     }
-    else if (player1Cards.length == 6){
-        alert("PLAYER ONE WINS")
+    else if (player1Cards.length == 7){
+        console.log("PLAYER ONE WINS")
     }
-    else if (player2Cards.length == 6){
-        alert("PLAYER 2 WINS")
+    else if (player2Cards.length == 7){
+        console.log("PLAYER TWO WINS")
     }
     else {
         pushFunc()
@@ -45,78 +85,34 @@ const drawCard = (playerNum) => {
 const pushFunc = (player) => {
     //Player 1 wins
     if (player == 1) {
-        player1Cards.push(player2Cards[0])
-        player2Cards.shift()
-        alert("player one won")
-        drawCard(1)
-        
+        const holdingPile = player1Cards.shift();
+            player2Cards.push(holdingPile);
+            holdingPile == player2Cards.shift();
+            player2Cards.push(holdingPile)
+        // console.log(`Player 1 length: ${playerCards1.length}`);
+        // console.log(`Player 2 length: ${playerCards2.length}`);
+        console.log("player one won that round")
+        drawCard(1)        
     }
     //player 2 wins
     else if (player == 2) {
-        player2Cards.push(player1Cards[0])
-        player1Cards.shift()
-        alert("player two won that round")
-        drawCard(2)
+        const holdingPile = player2Cards.shift();
+        player1Cards.push(holdingPile);
+        holdingPile == player1Cards.shift();
+        player1Cards.push(holdingPile);
+        // console.log(`Player 1 length: ${playerCards1.length}`);
+        // console.log(`Player 2 length: ${playerCards2.length}`);
+        console.log("player two won that round")
     }
     else {
-        player2Cards.push(player2Cards[0])
-        player1Cards.push(player1Cards[0])
         player2Cards.shift()
         player1Cards.shift()
+        player2Cards.push(player2Cards[0])
+        player1Cards.push(player1Cards[0]) 
     }   
 }
 
 drawCard(1)
-
-
-
-
-// Card template and set-up
-class fableTales {
-    constructor(name, strength, cunning, intelligence, magical, corruption){
-    this._name = name;
-    this._strength = strength;
-    this._cunning = cunning;
-    this._intelligence = intelligence;
-    this._magical = magical; 
-    this._corruption = corruption; 
-
-    }
-    // get name(){
-    //     return this._name
-    // }
-    // get strength (){
-    //     return this._strength
-    // }
-    // get cunning (){
-    //     return this._cunning
-    // }
-    // get intelligence(){
-    //     return this._intelligence
-    // }
-    // get magical(){
-    //     return this._magical
-    // }
-        // get corruption(){
-    //     return this._corruption
-    // }
-
-}
-
-const bigbyWolf = new fableTales("Bigby Wolf", 9, 7, 7, 5, 7)
-const snowWhite = new fableTales("Snow White", 3, 5, 8, 8, 3)
-const jackPumpkinhead = new fableTales("Jack Pumpkinhead", 2, 6, 4, 8, 4)
-const lamiaBeauty = new fableTales("Lamia Beauty", 7, 6, 4, 6, 9)
-
-console.log(bigbyWolf);
-console.log(snowWhite);
-console.log(jackPumpkinhead);
-console.log(lamiaBeauty);
-
-player1Cards = 
-player2Cards
-
-
 
 
 
