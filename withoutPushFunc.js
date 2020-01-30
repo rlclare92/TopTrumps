@@ -37,7 +37,34 @@ const player2Cards = [
     wickedWitch = new fableTales("Wicked Witch", 5, 2, 7, 9, 1)
 ]
 
-const pushFunc = () => {
+// const drawCard = (playerNum) => {
+
+//     console.log(`Player: ${playerNum} its your turn`)
+    
+    // console.log(`player 1 has CARD: ${player1Cards[0]._health} and ${player1Cards.length} cards`)
+    // console.log(`player 2 has CARD: ${player2Cards[0]._health} and ${player2Cards.length} cards`)
+    
+//     if (player1Cards[0].health > player2Cards[0]._health) {
+//         pushFunc(1)
+//     }
+//     else if (player2Cards[0].health > player1Cards[0]._health) {
+//         pushFunc(2)
+//     }
+//     else if (player1Cards.length == 7){
+//         console.log("PLAYER ONE WINS")
+//     }
+//     else if (player2Cards.length == 7){
+//         console.log("PLAYER TWO WINS")
+//     }
+//     else {
+//         pushFunc()
+//     } 
+// }
+
+const pushFunc = (playerNum) => {
+
+    console.log(`Player: ${playerNum} its your turn`)
+
 console.log(`player 1 has CARD: ${player1Cards[0]._health} and ${player1Cards.length} cards`)
 console.log(`player 2 has CARD: ${player2Cards[0]._health} and ${player2Cards.length} cards`)
 
@@ -47,14 +74,16 @@ if (player1Cards[0].health < player2Cards[0].health) {
     console.log(`player 2 length: ${player2Cards.length}`);
     player2Cards.push(holdingPile);
     console.log(`player 2 length: ${player2Cards.length}`);
+    console.log("player one won that round")
 }
 else if (player2Cards[0].health < player1Cards[0].health) {
     const holdingPile = player2Cards.shift();
     player1Cards.push(holdingPile);
     console.log(`player 1 length: ${player1Cards.length}`);
     console.log(`player 2 length: ${player2Cards.length}`);
+    console.log("player two won that round")
     }
 }
 
-pushFunc()
+pushFunc(1)
 

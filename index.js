@@ -62,13 +62,13 @@ const drawCard = (playerNum) => {
 
     console.log(`Player: ${playerNum} its your turn`)
     
-    console.log(`player 1 has CARD: ${player1Cards[0]._health} and ${player1Cards.length} cards`)
-    console.log(`player 2 has CARD: ${player2Cards[0]._health} and ${player2Cards.length} cards`)
+    console.log(`player 1 has CARD: ${player1Cards[0].health} and ${player1Cards.length} cards`)
+    console.log(`player 2 has CARD: ${player2Cards[0].health} and ${player2Cards.length} cards`)
     
-    if (player1Cards[0].health > player2Cards[0]._health) {
+    if (player1Cards[0].health > player2Cards[0].health) {
         pushFunc(1)
     }
-    else if (player2Cards[0].health > player1Cards[0]._health) {
+    else if (player2Cards[0].health > player1Cards[0].health) {
         pushFunc(2)
     }
     else if (player1Cards.length == 7){
