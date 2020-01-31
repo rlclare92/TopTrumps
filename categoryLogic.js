@@ -2,7 +2,25 @@ let player1Cards
 let player2Cards
 
 const playerCategoryChoice = () => {
-    
+    switch () {
+        case 'health':
+            drawCardHealth()
+        break;
+        case 'Strength':
+            drawCardStrength()
+        break;
+        case 'cunning':
+            drawCardCunning()
+        break;
+        case 'Intelligence':
+            drawCardIntelligence()
+        break;
+        case 'Magical':
+            drawCardMagical()
+        break;
+        case 'Corruption':
+            drawCardCorruption()
+    }
 }
 
 playerCategoryChoice(1);
