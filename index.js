@@ -22,21 +22,82 @@ class fableTales extends TopTrumps {
     this._corruption = corruption; 
     }
 }
+    bigbyWolf = new fableTales("Bigby Wolf", 9),
+    snowWhite = new fableTales("Snow White", 8),
+    jackPumpkinhead = new fableTales("Jack Pumpkinhead", 6),
+    belleBeauty = new fableTales("Belle  Beauty", 7)
+    cinderella = new fableTales("Cinderella", 3),
+    princeCharming = new fableTales("Prince Charming",6),
+    captainHook= new fableTales("Captain Hook", 4),
+    wickedWitch = new fableTales("Wicked Witch", 5)
+    evilQueen = new fableTales("Evil Queen", 8),
+    rumplestiltskin = new fableTales("Rumplestiltskin", 10),
+    robinHood = new fableTales("Robin Hood", 6),
+    tinkerBell = new fableTales("Tinker Bell", 4),
+    jekyllAndHyde = new fableTales("Jekyll and Hyde", 8),
+    maidMarian = new fableTales("Maid Marian", 5),
+    mulan = new fableTales("Mulan", 8),
+    princeEric = new fableTales("Prince Eric", 3),
+    victorFrankenstein = new fableTales("Victor Frankenstein", 4),
+    peterPan = new fableTales("Peter Pan", 7),
+    motherGothel = new fableTales("Mother Gothel", 6),
+    queenElsa = new fableTales("Queen Elsa", 8),
+    aladdin = new fableTales("Aladdin", 5),
+    jiminyCricket = new fableTales("Jiminy Cricket", 2),
+    huntsman = new fableTales("Huntsman", 6),
+    pinocchio  = new fableTales("Pinocchio", 2),
+    babaYaga = new fableTales("Baba Yaga", 8),
+    ariel = new fableTales("Ariel", 5)
+    sleepingBeauty = new fableTales("Sleeping beauty", 2),
+    princessAnna = new fableTales("Princess Anna", 5),
+    beast = new fableTales("Beast", 7),
+    magicmirror = new fableTales("Magic Mirror", 10)
 
-const player1Cards = [
-    bigbyWolf = new fableTales("Bigby Wolf", 9, 4 ,6, 8, 7),
-    snowWhite = new fableTales("Snow White", 9, 7 ,2, 9, 5),
-    jackPumpkinhead = new fableTales("Jack Pumpkinhead", 6, 4 ,6, 7, 6),
-    lamiaBeauty = new fableTales("Lamia Beauty", 7, 3, 7, 1, 0)
+cardDeck = [
+    bigbyWolf,
+    snowWhite,
+    jackPumpkinhead,
+    belleBeauty,
+    cinderella,
+    princeCharming,
+    captainHook,
+    wickedWitch,
+    evilQueen,
+    rumplestiltskin,
+    robinHood,
+    tinkerBell,
+    jekyllAndHyde,
+    maidMarian,
+    mulan,
+    princeEric,
+    victorFrankenstein,
+    peterPan,
+    motherGothel,
+    queenElsa,
+    aladdin,
+    jiminyCricket,
+    huntsman,
+    pinocchio,
+    babaYaga,
+    ariel,
+    sleepingBeauty,
+    princessAnna,
+    beast,
+    magicmirror
 ]
 
-const player2Cards = [
-    Cinderella = new fableTales("Cinderella", 3, 6, 2, 3, 1),
-    princeCharming = new fableTales("Prince Charming", 8, 6 ,7, 1, 5),
-    captainHook= new fableTales("Captain Hook", 4, 2, 4, 9, 5),
-    wickedWitch = new fableTales("Wicked Witch", 5, 2, 7, 9, 1)
-]
+// const shuffle = (cardDeck) => {
+//     // for (i = 0; i > cardDeck.length; i++){
+//     // Math.floor(Math.random(cardDeck[i]) * Math.floor(30));
+//     // console.log(cardDeck[i]);
 
+//     // Math.floor(Math.random()*cardDeck.length)
+//     // console.log(cardDeck);
+
+//     // let shuffleCards = [Math.floor(Math.random()*cardDeck.length)];
+// } 
+
+// shuffle()
 // const shuffle = () => {
 //     for (let i = 0; i < cards.length; i++){
 //         if (cards[i] % 2) {
@@ -50,13 +111,8 @@ const player2Cards = [
 
 // shuffle()
 
-// let player1Cards = [0]
-// let player2Cards = [0]
-// player1Cards = []
-// player2Cards = []
-// console.log(player1Cards[0]);
-
-// const holdingPile = 0;
+let player1Cards = cardDeck.splice(0,15);
+let player2Cards = cardDeck.splice(0,15);
 
 const drawCard = (playerNum) => {
 

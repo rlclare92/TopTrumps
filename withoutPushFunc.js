@@ -24,17 +24,17 @@ class fableTales extends TopTrumps {
 }
 
 const player1Cards = [
-    bigbyWolf = new fableTales("Bigby Wolf", 9, 4 ,6, 8, 7),
-    snowWhite = new fableTales("Snow White", 8, 7 ,2, 9, 5),
-    jackPumpkinhead = new fableTales("Jack Pumpkinhead", 6, 4 ,6, 7, 6),
-    lamiaBeauty = new fableTales("Lamia Beauty", 7, 3, 7, 1, 0)
+    bigbyWolf = new fableTales("Bigby Wolf", 9),
+    snowWhite = new fableTales("Snow White", 8),
+    jackPumpkinhead = new fableTales("Jack Pumpkinhead", 6),
+    lamiaBeauty = new fableTales("Lamia Beauty", 7)
 ]
 
 const player2Cards = [
-    Cinderella = new fableTales("Cinderella", 3, 6, 2, 3, 1),
-    princeCharming = new fableTales("Prince Charming", 6, 6 ,7, 1, 5),
-    captainHook= new fableTales("Captain Hook", 4, 2, 4, 9, 5),
-    wickedWitch = new fableTales("Wicked Witch", 5, 2, 7, 9, 1)
+    Cinderella = new fableTales("Cinderella", 3),
+    princeCharming = new fableTales("Prince Charming",6),
+    captainHook= new fableTales("Captain Hook", 4),
+    wickedWitch = new fableTales("Wicked Witch", 5)
 ]
 
 // const drawCard = (playerNum) => {
