@@ -25,14 +25,14 @@ class fableTales extends TopTrumps {
 
 const player1Cards = [
     bigbyWolf = new fableTales("Bigby Wolf", 9, 4 ,6, 8, 7),
-    snowWhite = new fableTales("Snow White", 9, 7 ,2, 9, 5),
+    snowWhite = new fableTales("Snow White", 8, 7 ,2, 9, 5),
     jackPumpkinhead = new fableTales("Jack Pumpkinhead", 6, 4 ,6, 7, 6),
     lamiaBeauty = new fableTales("Lamia Beauty", 7, 3, 7, 1, 0)
 ]
 
 const player2Cards = [
     Cinderella = new fableTales("Cinderella", 3, 6, 2, 3, 1),
-    princeCharming = new fableTales("Prince Charming", 8, 6 ,7, 1, 5),
+    princeCharming = new fableTales("Prince Charming", 6, 6 ,7, 1, 5),
     captainHook= new fableTales("Captain Hook", 4, 2, 4, 9, 5),
     wickedWitch = new fableTales("Wicked Witch", 5, 2, 7, 9, 1)
 ]
@@ -74,14 +74,16 @@ if (player1Cards[0].health < player2Cards[0].health) {
     console.log(`player 2 length: ${player2Cards.length}`);
     player2Cards.push(holdingPile);
     console.log(`player 2 length: ${player2Cards.length}`);
-    console.log("player one won that round")
+    console.log("player two won that round")
+    pushFunc(1)
 }
-else if (player2Cards[0].health < player1Cards[0].health) {
+else if (player1Cards[0].health > player2Cards[0].health) {
     const holdingPile = player2Cards.shift();
     player1Cards.push(holdingPile);
     console.log(`player 1 length: ${player1Cards.length}`);
     console.log(`player 2 length: ${player2Cards.length}`);
-    console.log("player two won that round")
+    console.log("player one won that round")
+    pushFunc(2)
     }
 }
 
