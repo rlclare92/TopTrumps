@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+
+#characterName {
+    font-family:'Abel', sans-serif;
+    font-size: 35px;
+    font-weight: bolder;
+    color: black;
+}
+
+#attributeButton {
+    font-family:'Abel', sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    border: darkcyan dashed 3px;
+}
