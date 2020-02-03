@@ -1,28 +1,21 @@
-// Card template and set-up using classes
 class TopTrumps {
     constructor(name, health) {
-        this._name = name;
-        this._health = health;
-    }
-    get name() {
-        return this._name;
-    }
-    get health() {
-        return this._health;
+        this.name = name;
+        this.health = health;
     }
 }
 
 class fableTales extends TopTrumps {
-    constructor(name, health, strength, cunning, intelligence, magical, corruption){
-    super(name, health)
-    this._strength = strength;
-    this._cunning = cunning;
-    this._intelligence = intelligence;
-    this._magical = magical; 
-    this._corruption = corruption; 
+    constructor(name, health, strength, cunning, intelligence, magical, corruption) {
+        super(name, health)
+        this.strength = strength;
+        this.cunning = cunning;
+        this.intelligence = intelligence;
+        this.magical = magical;
+        this.corruption = corruption;
     }
 }
-
+const player1Cards = [
     bigbyWolf = new fableTales("Bigby Wolf", 9, 1, 2, 3, 4, 5),
     snowWhite = new fableTales("Snow White", 8, 7, 6, 5, 4, 2),
     jackPumpkinhead = new fableTales("Jack Pumpkinhead", 6, 9, 2, 4, 3, 6),
@@ -36,6 +29,8 @@ class fableTales extends TopTrumps {
     robinHood = new fableTales("Robin Hood", 6, 5, 7, 1, 9, 3),
     tinkerBell = new fableTales("Tinker Bell", 4, 3, 7, 1, 8, 8),
     jekyllAndHyde = new fableTales("Jekyll and Hyde", 8, 3, 6, 1, 9, 4)
+]
+const player2Cards = [
     maidMarian = new fableTales("Maid Marian", 5, 6, 7, 8, 9, 10),
     mulan = new fableTales("Mulan", 8, 7, 6, 9, 3, 5),
     princeEric = new fableTales("Prince Eric", 3, 5, 7, 1, 4, 6),
@@ -53,43 +48,7 @@ class fableTales extends TopTrumps {
     princessAnna = new fableTales("Princess Anna", 5, 4, 7, 8, 1, 4),
     beast = new fableTales("Beast", 7, 6, 8, 3, 2, 7),
     magicmirror = new fableTales("Magic Mirror", 10, 1, 5, 9, 3, 6)
-
-
-cardDeck = [
-    bigbyWolf,
-    snowWhite,
-    jackPumpkinhead,
-    belleBeauty,
-    cinderella,
-    princeCharming,
-    captainHook,
-    wickedWitch,
-    evilQueen,
-    rumplestiltskin,
-    robinHood,
-    tinkerBell,
-    jekyllAndHyde,
-    maidMarian,
-    mulan,
-    princeEric,
-    victorFrankenstein,
-    peterPan,
-    motherGothel,
-    queenElsa,
-    aladdin,
-    jiminyCricket,
-    huntsman,
-    pinocchio,
-    babaYaga,
-    ariel,
-    sleepingBeauty,
-    princessAnna,
-    beast,
-    magicmirror
 ]
-
-let player1Cards = cardDeck.splice(0,15);
-let player2Cards = cardDeck.splice(0,15);
 
 const drawCardAttribute = (attribute) => {
     console.log(`Player: playerX its your turn`)
@@ -164,9 +123,3 @@ const playerCategoryChoice = (choice) => {
 }
 
 playerCategoryChoice(1);
-
-
-
-
-
-

@@ -32,3 +32,19 @@ let shuffle = cardDeck[Math.floor(Math.random()*cardDeck.length)]
 //       cardDeck.push(cardDeck.splice(Math.random() * i | 0, 1)[0]);
 //     console.log(cardDeck[i]);
 //   }
+
+// const deckShuffle = (cardDeck) => {
+//     let currentIndex = cardDeck.length;
+//     let temporaryVaule, randonIndex;
+
+//     while (0 !== currentIndex){
+//         randonIndex = Math.floor(math.randonIndex()* currentIndex);
+//         cureentIndex -=1;
+
+//         temporaryVaule = cardDeck[0];
+//         cardDeck[0] = cardDeck[15];
+//         cardDeck[randonIndex] = temporaryVaule;
+//         console.log(cardDeck);
+//     }
+    
+// }
