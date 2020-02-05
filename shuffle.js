@@ -1,50 +1,26 @@
-// below code puts 1 card out of the cardDeck 
-let shuffle = cardDeck[Math.floor(Math.random()*cardDeck.length)]
-    console.log(shuffle);
+let array = [
+    "evilQueen",
+    "rumplestiltskin",
+    "robinHood",
+    "tinkerBell",
+    "jekyllAndHyde",
+]
 
-// const shuffle = (cardDeck) => {
-//     // for (i = 0; i > cardDeck.length; i++){
-//     // Math.floor(Math.random(cardDeck[i]) * Math.floor(30));
-//     // console.log(cardDeck[i]);
+var shuffle = function (array) {
+   var currentIndex = array.length;
+    var temporaryValue, randomIndex;
 
-//     // Math.floor(Math.random()*cardDeck.length)
-//     // console.log(cardDeck);
+    while (0 !==currentIndex){
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
-//   let shuffleCards = [Math.floor(Math.random()*cardDeck.length)];
-// } 
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+    }
 
-// shuffle()
-// const shuffle = () => {
-//     for (let i = 0; i < cards.length; i++){
-//         if (cards[i] % 2) {
-//             player1Cards.push[cards[i]]
-//         } 
-//         else{
-//         player2Cards.push[cards[i]]
-//         }
-//     }
-// }
+    return array
+}
 
-// shuffle()
-
-// const shuffle = (cardDeck) => {
-//     for (let i = cardDeck.length; i > 0; --i)
-//       cardDeck.push(cardDeck.splice(Math.random() * i | 0, 1)[0]);
-//     console.log(cardDeck[i]);
-//   }
-
-// const deckShuffle = (cardDeck) => {
-//     let currentIndex = cardDeck.length;
-//     let temporaryVaule, randonIndex;
-
-//     while (0 !== currentIndex){
-//         randonIndex = Math.floor(math.randonIndex()* currentIndex);
-//         cureentIndex -=1;
-
-//         temporaryVaule = cardDeck[0];
-//         cardDeck[0] = cardDeck[15];
-//         cardDeck[randonIndex] = temporaryVaule;
-//         console.log(cardDeck);
-//     }
-    
-// }
+shuffle(array)
+console.log(array);
